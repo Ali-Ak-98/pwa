@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#splash {
+  background-color: #000000;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+  transition-property: top;
+  transition-duration: 1000ms;
+  transition-delay: 1000ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#splash.animate {
+  top: -100vh;
+}
+
