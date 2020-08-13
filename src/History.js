@@ -75,9 +75,9 @@ export default class History extends Component {
             .then(axios.spread((eth, btc, ltc) => {
                 let f = {
                     date: moment.unix(t).format("MMMM Do YYYY"),
-                    eth: eth.data.ETH.USD,
-                    btc: btc.data.BTC.USD,
-                    ltc: ltc.data.LTC.USD
+                    // eth: eth.data.ETH.USD,
+                    // btc: btc.data.BTC.USD,
+                    // ltc: ltc.data.LTC.USD
                 }
                 localStorage.setItem('twodaysprice', JSON.stringify(f));
                 // Set the state of twodaysprice to the content of the object f
@@ -94,9 +94,9 @@ export default class History extends Component {
                 console.log(eth.data,btc.data,ltc.data);
                 let f = {
                     date: moment.unix(t).format("MMMM Do YYYY"),
-                    eth: eth.data.ETH.USD,
-                    btc: btc.data.BTC.USD,
-                    ltc: ltc.data.LTC.USD
+                    // eth: eth.data.ETH.USD,
+                    // btc: btc.data.BTC.USD,
+                    // ltc: ltc.data.LTC.USD
                 }
                 localStorage.setItem('threedaysprice', JSON.stringify(f));
                 // Set the state of threedaysprice to the content of the object f
@@ -112,9 +112,9 @@ export default class History extends Component {
             .then(axios.spread((eth, btc, ltc) => {
                 let f = {
                     date: moment.unix(t).format("MMMM Do YYYY"),
-                    eth: eth.data.ETH.USD,
-                    btc: btc.data.BTC.USD,
-                    ltc: ltc.data.LTC.USD
+                    // eth: eth.data.ETH.USD,
+                    // btc: btc.data.BTC.USD,
+                    // ltc: ltc.data.LTC.USD
                 }
                 localStorage.setItem('fourdaysprice', JSON.stringify(f));
                 // Set the state of fourdaysprice to the content of the object f
