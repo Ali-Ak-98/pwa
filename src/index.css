@@ -19,9 +19,9 @@ code {
     height: 100vh;
     width: 100vw;
     z-index: 10;
-    transition-property: top;
-    transition-duration: 500ms;
-    transition-delay: 2000ms;
+    transition-property: opacity;
+    transition-duration: 200ms;
+    transition-delay: 1000ms;
     transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
     display: flex;
     flex-direction: column;
@@ -30,11 +30,26 @@ code {
 }
 
 #splash h1{
-    font-size: 4rem;
-    margin-top: 5%;
+    font-size: 3rem;
+}
+
+#splash img{
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 #splash.animate {
-    top: -100vh;
+    opacity: 0;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
 }
 
